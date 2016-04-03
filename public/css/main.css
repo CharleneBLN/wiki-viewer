@@ -1,0 +1,98 @@
+body {
+  background-image: url(image/book.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+/*adding transparency to the background image*/
+#container{
+  background-color: rgba(255, 255, 255, 0.7);
+  background-attachment: fixed;
+  padding: 30px;
+  min-height: 100vh;
+  margin: -8px;
+}
+
+h1 {
+  text-align: center;
+  color: #F07A86;
+  opacity: 0.8;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+#searchEngine {
+  display: flex;
+  margin: 0 auto 50px;
+  align-items: center;
+  justify-content: space-between;
+  height: 20px;
+  width: 200px;
+  background-color: white;
+  border: 1px solid #F07A86;
+}
+
+.search {
+  height: 100%;
+  padding: 0px 0px 0px 5px;
+  width: 170px;
+  border-radius: 0;
+  border: 0;
+}
+
+#submitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 20px;
+  height: 100%;
+  margin-left: 2px;
+  background-color: #F07A86;
+  opacity:0.9;
+}
+
+#submitButton:hover{
+background-color: #f47683;
+  cursor: pointer;
+  opacity:1;
+}
+
+#results{
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: center;
+}
+
+.unit {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: black;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+  background: white;
+  opacity: 0.7;
+  width: 200px;
+}
+
+.unit:hover{
+  opacity: 0.9;
+  border: 1px solid #F07A86;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.description{
+  font-size:12px;
+  padding:5px;
+}
