@@ -13,19 +13,27 @@ var displayResults = function(data) {
         "</div></a></div>");
     });
   } else {
-    $("#analysis").html("No result found");
+    $("#results").append("<div class='notFound'>No result found</div>");
   }
+}
+var submitQuery = function() {
+  $("#analysis").empty();
+  var searchInput = encodeURIComponent($(".searchBar").val()); //In case searchBar contains value such as "&" or "/"
+  $.ajax({
+    url: "https://en.wikipedia.org//w/api.php?action=query&format=json&formatversion=2&list=search&srsearch=" + searchInput,
+    dataType: "jsonp",
+    jsonp: "callback",
+    success: displayResults,
+  });
 }
 
 $(document).ready(function() {
+  $(".searchBar").keypress(function(event){
+    if (event.which===13) {
+      submitQuery();
+    }
+  });
   $("#submitButton").click(function() {
-    $("#analysis").empty();
-    var searchInput = $(".search").val();
-    $.ajax({
-      url: "https://en.wikipedia.org//w/api.php?action=query&format=json&formatversion=2&list=search&srsearch=" + searchInput,
-      dataType: "jsonp",
-      jsonp: "callback",
-      success: displayResults,
-    });
+    submitQuery();
   });
 });
