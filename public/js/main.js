@@ -17,7 +17,7 @@ var displayResults = function(data) {
   }
 }
 var submitQuery = function() {
-  $("#analysis").empty();
+  $("#results").empty();
   var searchInput = encodeURIComponent($(".searchBar").val()); //In case searchBar contains value such as "&" or "/"
   $.ajax({
     url: "https://en.wikipedia.org//w/api.php?action=query&format=json&formatversion=2&list=search&srsearch=" + searchInput,
