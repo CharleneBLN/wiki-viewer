@@ -37,7 +37,7 @@ a{
   border: 1px solid #F07A86;
 }
 
-.search {
+.searchBar {
   height: 100%;
   padding: 0px 0px 0px 5px;
   width: 170px;
@@ -70,7 +70,7 @@ background-color: #f47683;
  justify-content: center;
 }
 
-.unit {
+.unit, .notFound {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -83,7 +83,7 @@ background-color: #f47683;
   width: 200px;
 }
 
-.unit:hover{
+.unit:hover, .notFound {
   opacity: 0.9;
   border: 1px solid #F07A86;
 }
